@@ -11,4 +11,6 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn run build && yarn start
+RUN yarn run build 
+
+CMD ["yarn", "start"]
