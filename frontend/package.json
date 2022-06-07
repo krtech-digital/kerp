@@ -7,7 +7,10 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --check . || (echo \"Format the files with: 'yarn fmt'\" && exit 1)",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "export": "next export",
+    "prod": "sudo docker build -f .Dockerfiles/prod.Dockerfile -t kerp-frontend . && sudo docker run -p 80:80 kerp-frontend",
+    "push-image": "docker push url-registry/kerp-frontend:latest"
   },
   "dependencies": {
     "next": "12.0.3",
