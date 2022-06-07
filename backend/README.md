@@ -82,7 +82,7 @@ import routes from '@/routes'
 
 To run docker container that is built for production:
 ```
-yarn run prod
+yarn run build-prod
 ```
 open browser and go to http://localost:3001
 
