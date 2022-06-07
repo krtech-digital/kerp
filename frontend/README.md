@@ -33,7 +33,7 @@ Before running create .env.prod file!
 
 To run docker container that is built for production:
 ```
-yarn run prod
+yarn run build-prod
 ```
 
 open browser and go to http://localost
