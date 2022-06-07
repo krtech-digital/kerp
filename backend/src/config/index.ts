@@ -10,7 +10,7 @@ const CONFIG = {
     AUTHORS: pkg.authors,
     HOST: process.env.APP_HOST,
     BASE_URL: process.env.API_BASE_URL,
-    PORT: process.env.NODE_ENV === 'test' ? 8888 : process.env.PORT || 8080,
+    PORT: process.env.NODE_ENV === 'test' ? 8889 : process.env.PORT || 3001,
     ENV: process.env.NODE_ENV,
   },
   LOG: {
