@@ -80,7 +80,7 @@ import routes from '@/routes'
 
 ## Local Development
 
-Run the server locally. It will be run with Nodemon and ready to serve on port `8080` (unless you specify it on your `.env`)
+Run the server locally. It will be run with Nodemon and ready to serve on port `3001` (unless you specify it on your `.env`)
 
 ```bash
  yarn start # or npm start

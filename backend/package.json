@@ -23,7 +23,9 @@
     "service:delete": "pm2 delete ecosystem.config.js",
     "service:logs": "pm2 logs",
     "prettier": "prettier --check . || (echo \"Format the files with: 'yarn fmt'\" && exit 1)",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "prod": "yarn --prod",
+    "build-prod": "sudo docker build -f .Dockerfiles/prod.Dockerfile -t kerp-backend . && sudo docker run -p 3001:3001 kerp-backend"
   },
   "lint-staged": {
     "*.{ts,js}": [

@@ -19,7 +19,7 @@ module.exports = {
       },
       env_production: {
         NODE_ENV: 'production',
-        port: 8080,
+        port: 3001,
       },
       merge_logs: true,
       log_date_format: 'YYYY-MM-DDTHH:mm:ss.sssZ',
