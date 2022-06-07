@@ -36,7 +36,12 @@ To run docker container that is built for production:
 yarn run prod
 ```
 
+open browser and go to http://localost
+
 Or push image to docker repository (deploy):
+
 ```
 yarn run push-image
 ```
+
+> **_NOTE:_** If push to docker registry fails login to Dockerhub. Ask admin for credentials.
