@@ -98,17 +98,10 @@ yarn run push-image
 
 ## Production
 
-First, build the application.
+First, build the application and run.
 
 ```bash
- yarn build # or npm run build
+ yarn run build-prod
 ```
-
-Then, use [`pm2`](https://github.com/Unitech/pm2) to start the application as a service.
-
-```bash
- yarn service:start # or npm run service:start
-```
-
 <br>
 <br>
