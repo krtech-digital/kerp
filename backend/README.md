@@ -96,12 +96,18 @@ yarn run push-image
 <br>
 <br>
 
-## Production
+## Deploy to prod
 
-First, build the application and run.
-
-```bash
- yarn run build-prod
+To run docker container that is built for production:
 ```
+yarn run build-prod
+```
+open browser and go to http://localost:3001
+
+Or push image to docker repository (deploy):
+```
+yarn run push-image
+```
+    NOTE: If push to docker registry fails login to Dockerhub. Ask admin for credentials.
 <br>
 <br>
