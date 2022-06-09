@@ -9,7 +9,8 @@ COPY package*.json ./
 RUN yarn
 COPY . .
 RUN yarn run transpile
+COPY knexfile.ts ./dist
 
 USER node
 
-CMD [ "node", "./dist/src/index.js" ]
+CMD [ "node", "-r", "ts-node/register" ,"./dist/src/index.js" ]
