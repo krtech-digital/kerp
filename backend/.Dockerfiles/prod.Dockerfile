@@ -10,9 +10,6 @@ RUN yarn
 COPY . .
 RUN yarn run transpile
 
-# Bundle app source
-COPY --chown=node:node ./dist .
-
 USER node
 
 CMD [ "node", "./dist/src/index.js" ]
