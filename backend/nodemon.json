@@ -1,6 +1,9 @@
 {
-  "watch": ["src/**/*.ts", ".env"],
+  "watch": ["./src/**/*.ts", ".env"],
   "ext": "ts,js,.env",
   "verbose": false,
-  "exec": "ts-node -r tsconfig-paths/register src/index.ts"
+  "exec": "node -r ts-node/register --inspect ./src/index.ts",
+  "execMap": {
+    "ts": "node --require ts-node/register"
+  }
 }
