@@ -20,3 +20,27 @@ export const createUser = async (
     ["*"]
   );
 };
+
+export const findUserByUsernameAndPassword = async (
+  username: string,
+  password: string
+) => {
+  return await db
+    .table("users")
+    .where({
+      username: username,
+      password: password,
+    })
+    .select("*")
+    .first();
+};
+
+export const findUserByUsername = async (username: string) => {
+  return await db
+    .table("users")
+    .where({
+      username: username,
+    })
+    .select("*")
+    .first();
+};
