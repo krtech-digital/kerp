@@ -1,3 +1,4 @@
+import CONFIG from "@/config";
 import {
   createUser,
   findUserByUsername,
@@ -6,6 +7,7 @@ import {
 } from "@/service/user";
 import { compare, hash } from "@/utils/crypt";
 import { Response, Request, NextFunction } from "express";
+import jwt from "jsonwebtoken";
 
 export const getPublicUserById = async (
   req: Request,
@@ -78,5 +80,20 @@ export const loginUser = async (
     return res.status(401).send("Failed to login user");
   }
 
-  return res.json(user);
+  const token = jwt.sign(
+    {
+      username: user.username,
+      first_name: user.first_name,
+      last_name: user.last_name,
+    },
+    CONFIG.AUTH.JWT_SECRET!,
+    {
+      algorithm: "HS256",
+      expiresIn: 60 * 60 * 2,
+    }
+  );
+
+  return res.json({
+    accessToken: token,
+  });
 };
